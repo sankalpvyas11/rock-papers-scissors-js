@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Rock, Paper, Scissors</title>
+    <!-- Include Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #333;
+        color: #fff;
+        font-family: 'Press Start 2P', cursive;
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      h2 {
+        font-size: 18px;
+        letter-spacing: 2px;
+        margin: 10px;
+      }
+
+      #result {
+        color: #f39c12; /* Use a golden-yellow color for the result */
+      }
+
+      .game-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      .choice {
+        width: 150px;
+        height: 40px;
+        font-size: 14px;
+        margin: 5px;
+        background-color: #f39c12; /* Use golden-yellow for the background */
+        color: #333; /* Use black for the text color */
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .choice:hover {
+        background-color: #333; /* Use black for the background when hovering */
+        color: #f39c12; /* Use golden-yellow for the text color when hovering */
+      }
+
+      /* Add CSS animations for button clicks */
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .btn-click-animation {
+        animation: pulse 0.3s linear;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Computer Choice: <span id="computer-choice"></span></h2>
+    <h2>Your Choice: <span id="user-choice"></span></h2>
+    <h2>Result: <span id="result"></span></h2>
+
+    <div class="game-container">
+      <button class="choice btn btn-click-animation" id="Rock">Rock</button>
+      <button class="choice btn btn-click-animation" id="Paper">Paper</button>
+      <button class="choice btn btn-click-animation" id="Scissors">
+        Scissors
+      </button>
+    </div>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
